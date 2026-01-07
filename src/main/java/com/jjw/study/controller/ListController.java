@@ -16,10 +16,10 @@ import java.util.List;
 @Slf4j
 public class ListController {
 
-    private final ListService listService;
-
-    @GetMapping("")
-    public void listStudy() {
-        listService.listStudy();
-    }
+//    private final ListService listService;
+//
+//    @GetMapping("")
+//    public void listStudy() {
+//        listService.listStudy();
+//    }
 }

@@ -15,10 +15,10 @@ import java.util.Random;
 @Slf4j
 public class RandomController {
 
-    private final RandomService randomService;
-
-    @GetMapping("")
-    public void ramdomStudy() {
-        randomService.randomStudy();
-    }
+//    private final RandomService randomService;
+//
+//    @GetMapping("")
+//    public void ramdomStudy() {
+//        randomService.randomStudy();
+//    }
 }

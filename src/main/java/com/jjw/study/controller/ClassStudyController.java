@@ -9,13 +9,17 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Map;
 
-@RequiredArgsConstructor
+//@RequiredArgsConstructor
 @Slf4j
 @RestController
 @RequestMapping("/jiwon/classStudy")
 public class ClassStudyController {
 
     private final AnimalUse animalUse;
+
+    public ClassStudyController (AnimalUse animalUse) {
+        this.animalUse = animalUse;
+    }
 
     @GetMapping("")
     public Map<String, Object> classStudy() {

@@ -16,10 +16,10 @@ import java.util.Map;
 @Slf4j
 public class MapController {
 
-    private final MapService mapService;
-
-    @GetMapping("")
-    public void mapStudy() {
-        mapService.mapStudy();
-    }
+//    private final MapService mapService;
+//
+//    @GetMapping("")
+//    public void mapStudy() {
+//        mapService.mapStudy();
+//    }
 }

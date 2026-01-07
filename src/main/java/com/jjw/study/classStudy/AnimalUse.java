@@ -7,22 +7,22 @@ import org.springframework.stereotype.Component;
 import javax.swing.*;
 import java.util.Map;
 
-@Component()
+@Component
 @Slf4j
 public class AnimalUse {
 
     public Map<String, Object> animalUseTest() {
         // 1. 클래스/메서드
-//        Animal dog = new Animal();
-//        dog.setName("강아지");
-//
-//        Animal cat = new Animal();
-//        cat.setName("고양이");
-//
-//        return Map.of(
-//            "dog", Map.of("getName", dog.getName(), "getTypeName", dog.getTypeName()),
-//            "cat", Map.of("getName", cat.getName(), "getTypeName", cat.getTypeName())
-//        );
+        Animal dog = new Animal();
+        dog.setName("강아지");
+
+        Animal cat = new Animal();
+        cat.setName("고양이");
+
+        return Map.of(
+            "dog", Map.of("getName", dog.getName(), "getTypeName", dog.getTypeName()),
+            "cat", Map.of("getName", cat.getName(), "getTypeName", cat.getTypeName())
+        );
 
         // 2. 상속 기본
 //        Dog dog = new Dog();
@@ -56,9 +56,10 @@ public class AnimalUse {
 //        );
 
         // 3. 생성자
-        Animal a1 = new Animal("서울");
-        return Map.of(
-                "dog", Map.of( "getTypeName", a1.getTypeName(), "helloPlusBye", a1.city)
-        );
+//        Animal a1 = new Animal("서울");
+//        return Map.of(
+//                "dog", Map.of( "getTypeName", a1.getTypeName(), "helloPlusBye", a1.city)
+//        );
+
     }
 }

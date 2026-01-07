@@ -17,10 +17,10 @@ import java.util.List;
 @Slf4j
 public class ForController {
 
-    private final ForService forService;
-
-    @GetMapping("")
-    public void forStudy() {
-        forService.forStudy();
-    }
+//    private final ForService forService;
+//
+//    @GetMapping("")
+//    public void forStudy() {
+//        forService.forStudy();
+//    }
 }

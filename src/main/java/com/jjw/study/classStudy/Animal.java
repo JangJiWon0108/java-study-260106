@@ -4,11 +4,6 @@ public class Animal {
 
     String name; // 클래스 변수. this 로 접근. this는 생성된 객체를 가리킴
     static String typeName = "동물"; // 클래스 static 변수(모든 객체에서 공유 되므로, this 사용X)
-    String city;
-
-    Animal(String city) {
-        this.city = city;
-    }
 
     public void setName(String name) {
         this.name = name;
