@@ -4,6 +4,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 
+import javax.swing.*;
 import java.util.Map;
 
 @Component()
@@ -48,10 +49,16 @@ public class AnimalUse {
 //        );
 
         // 2-3. super 키워드
-        Dog dog = new Dog();
-        dog.setName("도그도그ㅋㅋ");
+//        Dog dog = new Dog();
+//        dog.setName("도그도그ㅋㅋ");
+//        return Map.of(
+//                "dog", Map.of("getName", dog.getName(), "getTypeName", dog.getTypeName(), "helloPlusBye", dog.helloPlusBye())
+//        );
+
+        // 3. 생성자
+        Animal a1 = new Animal("서울");
         return Map.of(
-                "dog", Map.of("getName", dog.getName(), "getTypeName", dog.getTypeName(), "helloPlusBye", dog.helloPlusBye())
+                "dog", Map.of( "getTypeName", a1.getTypeName(), "helloPlusBye", a1.city)
         );
     }
 }
