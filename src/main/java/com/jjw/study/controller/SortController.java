@@ -24,12 +24,12 @@ public class SortController {
     // sortUsingListSortComparator
     // sortUsingListSortLambda
 
-    public SortController (@Qualifier("sortUsingTimSort") SortService sortService) {
+    public SortController (@Qualifier("sortUsingListSortComparator") SortService sortService) {
         this.sortService = sortService;
     }
 
     @PostMapping("/exec")
-    public List<Map<Integer, Integer>> sortUsingFor(@RequestBody Map<String, Object> inputParamMap) {
+    public List<Map<Integer, Integer>> execSort(@RequestBody Map<String, Object> inputParamMap) {
         return sortService.execSort(inputParamMap.get("sort_target").toString(), inputParamMap.get("sort_order").toString());
     }
 }

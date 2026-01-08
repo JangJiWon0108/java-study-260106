@@ -26,7 +26,7 @@ public class SortUsingListSortLambdaServiceImpl implements SortService {
             log.info("RUN sortUsingListSortLambda");
             return sortUsingListSortLambda(sortTarget, sortOrder);
         } catch (Exception e) {
-            log.error("SortUsingTimSortServiceImpl 에러 : {}", e.getMessage());
+            log.error("SortUsingListSortLambdaServiceImpl 에러 : {}", e.getMessage());
             throw e;
         }
     }
