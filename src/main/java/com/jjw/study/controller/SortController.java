@@ -24,7 +24,7 @@ public class SortController {
     // sortUsingListSortComparator
     // sortUsingListSortLambda
 
-    public SortController (@Qualifier("sortUsingListSortComparator") SortService sortService) {
+    public SortController (@Qualifier("sortUsingListSortLambda") SortService sortService) {
         this.sortService = sortService;
     }
 

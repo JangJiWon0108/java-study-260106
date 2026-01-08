@@ -6,6 +6,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
+import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
 
@@ -33,7 +34,48 @@ public class SortUsingListSortLambdaServiceImpl implements SortService {
 
     public List<Map<Integer, Integer>> sortUsingListSortLambda(String sortTarget, String sortOrder) {
 
+        List<Map<Integer, Integer>> resultList = randomListUtil.generateRandomList(1, 100, 100);
 
-        return List.of(Map.of());
+        Comparator<Map<Integer, Integer>> comp = getComparator(sortTarget, sortOrder);
+
+        resultList.sort(comp);
+
+        return resultList;
+    }
+
+    public static Comparator<Map<Integer, Integer>> getComparator (String sortTrget, String sortOrder) {
+
+        // 람다표현식
+        return (Map<Integer, Integer> currentMap, Map<Integer, Integer> nextMap) -> {
+
+            Integer currentTarget;
+            Integer nextTarget;
+
+                if (sortTrget.equals("KEY")) {
+                currentTarget = currentMap.entrySet().iterator().next().getKey();
+                nextTarget = nextMap.entrySet().iterator().next().getKey();
+            } else {
+                currentTarget = currentMap.entrySet().iterator().next().getValue();
+                nextTarget = nextMap.entrySet().iterator().next().getValue();
+            }
+
+                if (sortOrder.equals("ASC")) {
+                if (currentTarget > nextTarget) {
+                    return 1;
+                } else if (currentTarget < nextTarget) {
+                    return -1;
+                } else {
+                    return 0;
+                }
+            } else {
+                if (currentTarget > nextTarget) {
+                    return -1;
+                } else if (currentTarget < nextTarget) {
+                    return 0;
+                } else {
+                    return 0;
+                }
+            }
+        };
     }
 }
